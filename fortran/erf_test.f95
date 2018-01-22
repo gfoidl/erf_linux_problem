@@ -1,8 +1,8 @@
 program erf_test
     implicit none
-    integer, parameter  :: seed = 42, N = 100000000
+    integer, parameter  :: seed = 42, N = 1000000000
     integer             :: i, k
-    real                :: start, finish
+    real(8)             :: start, finish
     real(8)             :: x, erf1, y1, y
 
     call srand(seed)
@@ -30,7 +30,7 @@ program erf_test
     end do
 end program erf_test
 !------------------------------------------------------------------------------
-real*8 function erf1(x)
+real(8) function erf1(x)
     implicit none
     real(8)             :: x
     real(8), parameter  :: a1 = 0.254829592
